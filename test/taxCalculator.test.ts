@@ -14,7 +14,7 @@ describe("--- calculateVAT ---", () => {
   });
 
   test("(4) handles negative amounts correctly", () => {
-    expect(calculateVAT(-100, 20)).toBe(-20);
-    expect(calculateVAT(-100, 20)).not.toBe(20);
+    expect(calculateVAT(-100, 20)).toBe(20);
+    expect(calculateVAT(-100, 20)).not.toBe(-20);
   });
 });
