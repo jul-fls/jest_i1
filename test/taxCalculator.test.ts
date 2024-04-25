@@ -1,4 +1,4 @@
-import { calculateVAT } from "../taxCalculator";
+import { calculateVAT, calculateTotal } from "../taxCalculator";
 
 describe("--- calculateVAT ---", () => {
   test("(1) calculates 20% VAT correctly", () => {
@@ -7,6 +7,7 @@ describe("--- calculateVAT ---", () => {
 
   test("(2) calculates 5% VAT on a different amount correctly", () => {
     expect(calculateVAT(200, 5)).toBe(10);
+    expect(calculateVAT(200, 10)).toBe(20);
   });
 
   test("(3) returns 0 when the VAT rate is 0", () => {
